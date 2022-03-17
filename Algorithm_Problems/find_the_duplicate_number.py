@@ -1,0 +1,28 @@
+"""
+Given a limited range array of size n where array contains elements between 1 to n-1 with one element repeating,
+find the duplicate number in this array.
+
+Example:
+    given: [1,2,3,2,4] return:2
+    given: [1,2,3,4,4] return:4
+
+"""
+
+
+def solution(arr):
+
+    duplicate_element = 0
+    for i in range(len(arr)):
+        temp_element = arr[i]
+        count = 0
+        for j in arr:
+            if j == temp_element:
+                count += 1
+            if count == 2:
+                duplicate_element = j
+                count = 0
+
+    print(duplicate_element)
+
+
+solution([1,2,3,2,4])
