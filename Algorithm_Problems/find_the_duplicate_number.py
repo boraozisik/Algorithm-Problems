@@ -9,13 +9,13 @@ Example:
 """
 
 
-def solution(arr):
+def solution(array):
 
     duplicate_element = 0
-    for i in range(len(arr)):
-        temp_element = arr[i]
+    for i in range(len(array)):
+        temp_element = array[i]
         count = 0
-        for j in arr:
+        for j in array:
             if j == temp_element:
                 count += 1
             if count == 2:
